@@ -1,0 +1,92 @@
+body {
+  font-size: .880rem;
+}
+
+/* color for any text  */
+.mytextcolor {
+  color: darkcyan;
+}
+/* button hover for any button  */
+.mybtnhover{
+  color:turquoise
+}
+.mybtnhover:hover {
+  color: lightseagreen;
+}
+
+.sidebar {
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 0;
+  /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); */
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px; 
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  
+  display: flex;
+  padding-top: 10px;
+  padding-left: 35px;
+  vertical-align: middle;
+}
+
+
+.sidebar .nav-link {
+  color: darkcyan;
+  
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  color : turquoise;
+  font-size: large;
+}
+
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .20rem;
+  padding-bottom: .20rem;
+  font-size: 35px;
+  font-family: Dancing Minotaur;
+  color: darkcyan;
+  padding-left: 0rem;
+}
+
+.navbar .form-control {
+  width: 40rem;
+  border-width: 0;
+  border-radius: 10px;
+  padding-left:0;
+  background-color: #D4E6F1;
+  /* text-align: center;   */
+  text-align: center;
+}
+.navbar .form-control::placeholder{
+  padding-left: 10px;
+}
+
+
+.navbar .form-control:hover,
+.navbar .form-control:focus{
+  background-color: #F2F4F4;
+  outline: rgb(0, 0, 0);
+  outline-width: 5px;
+}

@@ -1,0 +1,19 @@
+/* color for any text  */
+.mytextcolor {
+    color: darkcyan;
+  }
+  /* button hover for any button  */
+  .mybtnhover{
+    color:lightseagreen
+  }
+  .mybtnhover:hover {
+    color: darkcyan;
+    font-weight: 500;
+  }
+
+.ordertab tbody{
+    background-color: #FBFCFC;
+}
+.ordertab :hover{
+  background-color: #F0F3F4;
+}

@@ -1,0 +1,110 @@
+// import useRazorpay from "react-razorpay";
+
+//  const razorPay = useRazorpay();
+
+//     const paymentHandle = async () =>{
+//         console.log('paymentHandle called.-----------');
+//         const options = {
+//             key: "rzp_test_Jy9ue42qdLUmpl", // Enter the Key ID generated from the Dashboard
+//             amount: 100 * 1, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+//             currency: "INR",
+//             name: "Sudo Shop",
+//             description: "Test Transaction",
+//             image: "/icons/shopping-cart.png", //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
+//             handler: function (response) {
+//                 console.log("this is razorpay response", response);
+//               alert(response.razorpay_payment_id);
+//               alert(response.razorpay_order_id);
+//               alert(response.razorpay_signature);
+//             },
+//             prefill: {
+//               name: userInfo.userName,
+//               email: userInfo.emailId,
+//               contact: custAddrs.mobileNumber,
+//             }
+//           };
+//         const rzp1 = new razorPay(options);
+//         console.log('paymentHandle called.----------after activating razorpay-----------');
+//         rzp1.on("payment.failed", function (response) {
+//             alert(response.error.code);
+//             alert(response.error.description);
+//             alert(response.error.source);
+//             alert(response.error.step);
+//             alert(response.error.reason);
+//             alert(response.error.metadata.order_id);
+//             alert(response.error.metadata.payment_id);
+//           });
+        
+//         rzp1.open();
+
+//     }
+
+//     const loadScript = (src) => {
+//       return new Promise((resolve) => {
+//         const script = document.createElement("script");
+//         script.src = src;
+//         script.onload = () => {
+//           resolve(true);
+//         };
+//         script.onerror = () => {
+//           resolve(false);
+//         };
+//        document.body.appendChild(script);
+//      });
+//   };
+  
+//   const razorpay = async ()=>{
+//       let res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+//       if(!res){
+//           alert('check if you are online or not');
+//           return
+//       }
+//       let cartDelete = await axios.delete(`http://localhost:8989/deleteusercart/${userInfo.userId}`);
+//       console.log(cartDelete, '------------clear cart  cart');
+//       if(cartDelete.data.deletedCount > 0){
+//           console.log(cartDelete, '------------------detete');
+//           dispatch({type:"Cart_Vals", payload : {size : null}})
+//       }else{
+//           console.log(cartDelete);
+//       }
+//       const options = {
+//           key: "rzp_test_Jy9ue42qdLUmpl",
+//           currency: 'INR',
+//           amount: 100*1,
+//           name: "Learning To Code Online",
+//           description: "Test Wallet Transaction",
+//           image: "icons/shopping-cart.png",
+          
+//           handler: function (response) {
+//               console.log(response,'this is response for razorpay.............');
+//               if(response.razorpay_payment_id){
+//                   console.log(response.razorpay_payment_id, uuid(), '-------------res-------------uuid');
+//                   console.log('----------........----', cartVals.cartPrice, '-------------');
+//                   axios.post("http://localhost:8989/neworder", {
+//                       orderId : uuid(),
+//                       userId : userInfo.userId,
+//                       details : {
+//                           customer : custAddrs.customer,
+//                           mobile : custAddrs.mobile,
+//                           address  : `${custAddrs.drnstrt},${custAddrs.city},${custAddrs.district},${custAddrs.state},${custAddrs.pincode}`,
+//                           amount : parseInt(cartVals.cartPrice),
+//                           products : cartItems
+//                       }
+//                   }).then(res =>{
+//                       console.log(res)    ;
+//                   });
+//                   navigate('/orderconfirmpage');
+//               }else{
+//                   alert('your order was not placed.')
+//               }
+//           },
+//           prefill: {
+//             name: "rajesh kumar",
+//             email: "kumar@gmail.com",
+//             contact: "9999999999",
+//           },
+//         };
+      
+//       const paymentObject = new window.Razorpay(options);
+//       paymentObject.open();
+//   }

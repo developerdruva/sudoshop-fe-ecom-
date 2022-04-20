@@ -1,0 +1,21 @@
+.signinform div div input{
+    background-color: none;
+    outline: none;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+}
+.signinform div div input.form-control:focus{
+     box-shadow: inset 0 -1px 0 #ddd;
+    background-color: none;
+    outline:none;
+}
+.signinform button {
+    background-color: none;
+    text-decoration: none;
+    color: #39C0ED;
+}
+.card div div p small button{
+    text-decoration: none;
+    color: #39C0ED;
+}
