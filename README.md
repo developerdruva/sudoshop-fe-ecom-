@@ -2,6 +2,8 @@
 
 an ecommerce application for online shopping frontend
 
+using Reactjs+Redux, Express, NodeJs and MongoDB + MongoDB Atlas
+
 for demo:
 https://sudoshop.netlify.app
 
